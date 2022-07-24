@@ -22,7 +22,7 @@ Understand localization
 Write unit test
 
 **Architecture**
-MVVM 
+MVVM
 Use closures to communicate between controller and view model
 Build a generic network layer combined with Alamofire.
 Use protocols to pass the data from the network layer to the screen
