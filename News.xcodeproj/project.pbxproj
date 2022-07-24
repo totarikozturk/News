@@ -59,6 +59,7 @@
 		D02E9758288CAEDF00424B56 /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
 		D02E975A288CAF0C00424B56 /* BookMarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkViewController.swift; sourceTree = "<group>"; };
 		D02E975C288CAFC700424B56 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D0DB46D2288D63D500AA5A92 /* News.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = News.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +92,7 @@
 		D02E9701288CA1DF00424B56 = {
 			isa = PBXGroup;
 			children = (
-				D02E970C288CA1DF00424B56 /* News */,
+				D02E970C288CA1DF00424B56 /* NewsApp */,
 				D02E9723288CA1E100424B56 /* NewsTests */,
 				D02E972D288CA1E100424B56 /* NewsUITests */,
 				D02E970B288CA1DF00424B56 /* Products */,
@@ -108,7 +109,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D02E970C288CA1DF00424B56 /* News */ = {
+		D02E970C288CA1DF00424B56 /* NewsApp */ = {
 			isa = PBXGroup;
 			children = (
 				D02E973E288CA77400424B56 /* App */,
@@ -118,7 +119,7 @@
 				D02E9742288CA79800424B56 /* Services */,
 				D02E9743288CA79F00424B56 /* Utilities */,
 			);
-			path = News;
+			path = NewsApp;
 			sourceTree = "<group>";
 		};
 		D02E9723288CA1E100424B56 /* NewsTests */ = {
@@ -157,6 +158,7 @@
 		D02E9740288CA78A00424B56 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D0DB46D2288D63D500AA5A92 /* News.entitlements */,
 				D02E9716288CA1E100424B56 /* Assets.xcassets */,
 				D02E971B288CA1E100424B56 /* Info.plist */,
 			);
@@ -545,6 +547,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = News/Resources/News.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HJMW5QNUJY;
@@ -561,7 +564,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.News;
+				PRODUCT_BUNDLE_IDENTIFIER = com.News.exampleidea;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -574,6 +577,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = News/Resources/News.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HJMW5QNUJY;
@@ -590,7 +594,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.News;
+				PRODUCT_BUNDLE_IDENTIFIER = com.News.exampleidea;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
