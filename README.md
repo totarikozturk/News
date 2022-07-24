@@ -1,5 +1,4 @@
-**News App**
- 
+**News App** 
 Four page news list app.
 
 The first appearing screen is the splash screen. Asking to user push notification permission at splash.
@@ -11,7 +10,6 @@ By tapping one of the news, the news detail screen appear. I can able to add the
 The last screen is the favorites that have the favorite news. Opening via Safari when a favorited news is tapped.
 
 **Goals**
-  
 Learn asking permission
 Learn how to use closures
 Understand MVVM by separating logic between controller and view model
@@ -24,14 +22,12 @@ Understand localization
 Write unit test
 
 **Architecture**
-
 MVVM 
 Use closures to communicate between controller and view model
 Build a generic network layer combined with Alamofire.
 Use protocols to pass the data from the network layer to the screen
 
 **Language / Framework**
-
 Swift with UIKit
 Responsive Design
 SnapKit integrated to build UI programmatically. 
@@ -39,7 +35,6 @@ Table view for the list screen
 Download news images via Kingfisher
 
 **Keywords**
-
 MVVM
 Table view
 Codable
