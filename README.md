@@ -12,16 +12,16 @@ The last screen is the favorites that have the favorite news. Opening via Safari
 
 **Goals**
 
-Learn asking permission
-Learn how to use closures
-Understand MVVM by separating logic between controller and view model
-Integrate third-party library
-Build UI programmatically in controller
-Use UserDefaults
-Integrate generic network layer by Alamofire
-Use model(such as News) with Codable
-Understand localization
-Write unit test
+ Learn asking permission
+ Learn how to use closures
+ Understand MVVM by separating logic between controller and view model
+ Integrate third-party library
+ Build UI programmatically in controller
+ Use UserDefaults
+ Integrate generic network layer by Alamofire
+ Use model(such as News) with Codable
+ Understand localization
+ Write unit test
 
 **Architecture**
 
