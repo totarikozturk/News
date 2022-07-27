@@ -2,7 +2,7 @@
 //  Constant.swift
 //  Movies
 //
-//  Created by TarıkOzturk on 2.07.2022.
+//  Created by TarıkOzturk on 24.07.2022.
 //
 
 import UIKit

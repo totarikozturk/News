@@ -22,6 +22,7 @@
 		D02E9759288CAEDF00424B56 /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02E9758288CAEDF00424B56 /* NewsDetailViewController.swift */; };
 		D02E975B288CAF0C00424B56 /* BookMarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02E975A288CAF0C00424B56 /* BookMarkViewController.swift */; };
 		D02E975D288CAFC700424B56 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02E975C288CAFC700424B56 /* Constants.swift */; };
+		D0DB46D428905FD400AA5A92 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB46D328905FD400AA5A92 /* AppManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		D02E975A288CAF0C00424B56 /* BookMarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkViewController.swift; sourceTree = "<group>"; };
 		D02E975C288CAFC700424B56 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D0DB46D2288D63D500AA5A92 /* News.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = News.entitlements; sourceTree = "<group>"; };
+		D0DB46D328905FD400AA5A92 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,8 +144,9 @@
 		D02E973E288CA77400424B56 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				D02E970F288CA1DF00424B56 /* SceneDelegate.swift */,
 				D02E970D288CA1DF00424B56 /* AppDelegate.swift */,
+				D02E970F288CA1DF00424B56 /* SceneDelegate.swift */,
+				D0DB46D328905FD400AA5A92 /* AppManager.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -158,9 +161,9 @@
 		D02E9740288CA78A00424B56 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D0DB46D2288D63D500AA5A92 /* News.entitlements */,
 				D02E9716288CA1E100424B56 /* Assets.xcassets */,
 				D02E971B288CA1E100424B56 /* Info.plist */,
+				D0DB46D2288D63D500AA5A92 /* News.entitlements */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D02E970E288CA1DF00424B56 /* AppDelegate.swift in Sources */,
+				D0DB46D428905FD400AA5A92 /* AppManager.swift in Sources */,
 				D02E9710288CA1DF00424B56 /* SceneDelegate.swift in Sources */,
 				D02E974E288CA99000424B56 /* MakeSplashView.swift in Sources */,
 				D02E9759288CAEDF00424B56 /* NewsDetailViewController.swift in Sources */,
@@ -547,12 +551,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = News/Resources/News.entitlements;
+				CODE_SIGN_ENTITLEMENTS = NewsApp/Resources/News.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HJMW5QNUJY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = News/Resources/Info.plist;
+				INFOPLIST_FILE = NewsApp/Resources/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = News;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = SplashViewController;
@@ -577,12 +581,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = News/Resources/News.entitlements;
+				CODE_SIGN_ENTITLEMENTS = NewsApp/Resources/News.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HJMW5QNUJY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = News/Resources/Info.plist;
+				INFOPLIST_FILE = NewsApp/Resources/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = News;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = SplashViewController;

@@ -2,7 +2,7 @@
 //  MakeSplashView.swift
 //  Movies
 //
-//  Created by TarıkOzturk on 21.06.2022.
+//  Created by TarıkOzturk on 24.07.2022.
 //
 
 import UIKit
@@ -11,32 +11,19 @@ import SnapKit
 extension SplashViewController {
 
     func configureView() {
-        view.addSubview(activityIndicator)
         view.addSubview(appTitle)
         makeAppTitle()
-        startLoading()
-        view.backgroundColor = UIColor.blue
-    }
-
-    func makeActivityIndicator() {
-        activityIndicator.center = self.view.center
-        activityIndicator.hidesWhenStopped = true
-        activityIndicator.style = UIActivityIndicatorView.Style.large
+        view.backgroundColor = CustomColor.backGroundColor
     }
 
     func makeAppTitle() {
         appTitle.text = "N E W S"
-        appTitle.textColor = UIColor.yellow
-        appTitle.font = .systemFont(ofSize: 70, weight: .bold )
+        appTitle.textColor = CustomColor.titleColor
+        appTitle.font = .systemFont(ofSize: 72, weight: .bold )
         appTitle.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide.snp.topMargin).offset(72)
             make.centerX.equalTo(view.center.x)
         }
-    }
-
-    func startLoading() {
-        makeActivityIndicator()
-        activityIndicator.startAnimating()
     }
 
     func setTabBarController() {
