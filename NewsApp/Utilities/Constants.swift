@@ -32,7 +32,7 @@ enum ErrorCode {
     static let responseStatusCode = "Response status code:"
     static let emptyData = "Empty Data"
     static let errorProcessingJson = "Error processing json data:"
-    static let fatalInitError = "init(coder:) has not been implemented"
+    static let fatalInitError = "has not been implemented"
 }
 
 enum Titles {
