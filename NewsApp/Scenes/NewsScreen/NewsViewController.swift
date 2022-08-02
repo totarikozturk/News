@@ -13,13 +13,17 @@ class NewsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.systemTeal
-        getNews(query: "fenerbahce", fromDate: "2022-07-8", toDate: "2022-07-8", sortBy: "popularity")
+        getDefaultNews()
     }
 
-    func getNews(query: String, fromDate: String, toDate: String, sortBy: String) {
+    func getDefaultNews() {
+        let query = "apple"
+        let fromDate = "2022-07-31"
+        let toDate = "2022-07-31"
+        let sortBy = "popularity"
+
         viewModel.newsList(query: query, fromDate: fromDate, toDate: toDate, sortBy: sortBy) { [weak self] in
-            guard let self = self else {return}
-            print(self)
+            print(self as Any)
         }
     }
 

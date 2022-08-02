@@ -4,7 +4,6 @@
 //
 //  Created by TarıkOzturk on 2.08.2022.
 //
-
 import Foundation
 
 class NewsListRequestModel: RequestModel {
@@ -38,4 +37,5 @@ class NewsListRequestModel: RequestModel {
             "sortBy": self.sortBy
         ]
     }
+
 }

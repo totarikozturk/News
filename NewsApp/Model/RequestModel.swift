@@ -47,11 +47,10 @@ extension RequestModel {
         for parameter in parameters {
             if let value = parameter.value as? String {
                 endpoint.append("&\(parameter.key)=\(parameter.value!)")
+                print(value)
             }
         }
-        print(endpoint)
         var request: URLRequest = URLRequest(url: URL(string: endpoint)!)
-
         request.httpMethod = method.rawValue
 
         for header in headers {
@@ -69,4 +68,5 @@ extension RequestModel {
 
         return request
     }
+
 }

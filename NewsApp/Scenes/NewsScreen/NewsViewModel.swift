@@ -27,4 +27,19 @@ class NewsViewModel {
             }
         }
     }
+
+    func numberOfRowsInSection(section: Int) -> Int {
+        if newsList.count != 0 {
+            return newsList.count
+        }
+        return 0
+    }
+
+    func cellForRowAt (indexPath: IndexPath) -> Article {
+        return newsList[indexPath.row]
+    }
+
+    func didSelectedRowAt (indexPath: IndexPath) -> Article {
+        return newsList[indexPath.row]
+    }
 }

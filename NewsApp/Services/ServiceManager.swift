@@ -22,13 +22,11 @@ extension ServiceManager {
                 return
             }
             guard let decodedResponse = try? JSONDecoder().decode(T.self, from: data) else {
-//                let str = String(decoding: data, as: UTF8.self)
-//                print(str)
                 print("Decode Error")
                 return
             }
             completion(Result.success(decodedResponse))
-            print(decodedResponse)
+//            print(decodedResponse)
         }
     }
 }
