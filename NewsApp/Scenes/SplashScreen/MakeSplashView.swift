@@ -5,8 +5,8 @@
 //  Created by TarıkOzturk on 24.07.2022.
 //
 
-import UIKit
 import SnapKit
+import UIKit
 
 extension SplashViewController {
 
@@ -50,5 +50,4 @@ extension SplashViewController {
             self.view.window?.rootViewController = tabbarViewController
         }
     }
-
 }

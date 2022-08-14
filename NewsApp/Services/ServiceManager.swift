@@ -4,17 +4,17 @@
 //
 //  Created by TarıkOzturk on 2.08.2022.
 //
-import UIKit
 import Alamofire
+import UIKit
 
 class ServiceManager {
-    public static let shared: ServiceManager = ServiceManager()
+    public static let shared = ServiceManager()
 }
 
 extension ServiceManager {
 
     func sendRequest<T: Codable>(request: RequestModel, completion: @escaping(Swift.Result<T, AFError>) -> Void) {
-        AF.request(request.urlRequest()).validate().responseJSON { (response) in
+        AF.request(request.urlRequest()).validate().responseJSON { response in
             guard let data = response.data else {
                 if let error = response.error {
                     completion(Result.failure(error))

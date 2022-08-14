@@ -5,8 +5,8 @@
 //  Created by TarıkOzturk on 24.07.2022.
 //
 
-import XCTest
 @testable import News
+import XCTest
 
 class NewsTests: XCTestCase {
 
@@ -19,7 +19,6 @@ class NewsTests: XCTestCase {
     }
 
     func testExample() throws {
-
     }
 
     func testPerformanceExample() throws {
@@ -28,5 +27,4 @@ class NewsTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-
 }

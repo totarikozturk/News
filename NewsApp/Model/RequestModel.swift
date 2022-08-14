@@ -17,24 +17,24 @@ class RequestModel: NSObject {
     // MARK: Properties
 
     var path: String {
-        return ""
+        ""
     }
     var parameters: [String: Any?] {
-        return [:]
+        [:]
     }
     var headers: [String: String] {
-        return [:]
+        [:]
     }
     var method: RequestHTTPMethod {
-        return .get
+        .get
     }
     var body: [String: Any?] {
-        return [:]
+        [:]
     }
 
     // (request, response)
     var isLoggingEnabled: (Bool, Bool) {
-        return (true, true)
+        (true, true)
     }
 }
 
@@ -50,7 +50,7 @@ extension RequestModel {
                 print(value)
             }
         }
-        var request: URLRequest = URLRequest(url: URL(string: endpoint)!)
+        var request = URLRequest(url: URL(string: endpoint)!)
         request.httpMethod = method.rawValue
 
         for header in headers {
@@ -61,12 +61,11 @@ extension RequestModel {
             do {
                 request.httpBody = try JSONSerialization.data(withJSONObject: body,
                                                               options: JSONSerialization.WritingOptions.prettyPrinted)
-            } catch let error {
+            } catch {
                 print(error)
             }
         }
 
         return request
     }
-
 }

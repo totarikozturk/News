@@ -26,16 +26,15 @@ class NewsListRequestModel: RequestModel {
     }
 
     override var path: String {
-        return "\(APIKey.baseURL)?apikey=\(APIKey.apiKey)"
+        "\(APIKey.baseURL)?apikey=\(APIKey.apiKey)"
     }
 
     override var parameters: [String: Any?] {
-        return [
+        [
             "q": self.query,
             "from": self.fromDate,
             "to": self.toDate,
             "sortBy": self.sortBy
         ]
     }
-
 }

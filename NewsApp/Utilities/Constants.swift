@@ -8,7 +8,7 @@
 import UIKit
 
 enum CellIdent {
-
+    static let newsCell = "NewsCell"
 }
 
 enum ViewSymbols {
@@ -28,7 +28,7 @@ enum CustomColor {
 
 enum ErrorCode {
     static let dataTaskError = "DataTask error:"
-    static let responseError =  "Empty Response"
+    static let responseError = "Empty Response"
     static let responseStatusCode = "Response status code:"
     static let emptyData = "Empty Data"
     static let errorProcessingJson = "Error processing json data:"
@@ -38,8 +38,8 @@ enum ErrorCode {
 enum Titles {
 //    static let appTitle = NSLocalizedString("Movies", comment: "App title")
     static let newsTabTitle = NSLocalizedString("News", comment: "Tabbar news button")
-    static let bookMarkTabTitle =  NSLocalizedString("Bookmarks", comment: "Tabbar bookmark button")
-//    static let moviesViewTitle = NSLocalizedString("Movies You Looking For ?", comment: "MoviesView Navigation Title")
+    static let bookMarkTabTitle = NSLocalizedString("Bookmarks", comment: "Tabbar bookmark button")
+    static let newsViewTitle = NSLocalizedString("News You Looking For ?", comment: "NewsView Navigation Title")
 //    static let bookmarkViewTitle = NSLocalizedString("Your Favourite Movies",
 //                                                     comment: "BookmarkView Navigation Title")
 //    static let detailReleaseTitle = NSLocalizedString("Release Date:",
@@ -49,6 +49,6 @@ enum Titles {
 }
 
 enum Texts {
-//    static let searchBarPlaceHolderText = NSLocalizedString("Enter the movie name",
-//                                                            comment: "Searchbar Placeholder text")
+    static let searchBarPlaceHolderText = NSLocalizedString("Search news...",
+                                                            comment: "Searchbar Placeholder text")
 }

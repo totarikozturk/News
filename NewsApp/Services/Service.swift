@@ -18,7 +18,7 @@ public class Services {
         ServiceManager.shared.sendRequest(request: NewsListRequestModel(query: query,
                                  fromDate: fromDate,
                                  toDate: toDate,
-                                 sortBy: sortBy )) { (result) in
+                                 sortBy: sortBy )) { result in
             completion(result)
         }
     }

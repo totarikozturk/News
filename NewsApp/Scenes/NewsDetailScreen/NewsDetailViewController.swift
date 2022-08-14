@@ -12,5 +12,4 @@ class NewsDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
 }

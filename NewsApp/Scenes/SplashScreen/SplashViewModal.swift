@@ -20,7 +20,7 @@ class SplashViewModal {
                     if granted {
                         action()
                     }
-                }
+            }
     }
 
     func getNotificationSettings() {
@@ -43,5 +43,4 @@ class SplashViewModal {
                      didFailToRegisterForRemoteNotificationsWithError error: Error) {
         print("Failed to register: \(error)")
     }
-
 }
