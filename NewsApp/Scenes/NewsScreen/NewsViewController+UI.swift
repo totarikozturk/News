@@ -19,6 +19,9 @@ extension NewsViewController {
 
     func drawDesign() {
         view.addSubview(tableView)
+        tableView.addSubview(refreshControl)
+        refreshControl.attributedTitle = NSAttributedString(string: "Fetching News Data")
+        refreshControl.tintColor = CustomColor.titleColor
     }
 
     func makeSearchBar() {

@@ -11,18 +11,21 @@ class NewsViewController: UIViewController {
     let appearance = UINavigationBarAppearance()
     let tableView = UITableView()
     let searchBar = UISearchController()
+    let refreshControl = UIRefreshControl()
 
     private let viewModel = NewsViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.systemTeal
+
+        refreshControl.addTarget(self, action: #selector(refreshNewsData(_:)), for: .valueChanged)
         configureView()
         getDefaultNews()
     }
 
     func getDefaultNews() {
-        let query = "pegasus"
+        let query = "everything"
         let fromDate = "2022-08-14"
         let toDate = "2022-07-14"
         let sortBy = "popularity"
@@ -31,6 +34,15 @@ class NewsViewController: UIViewController {
             print(self as Any)
             self?.tableView.reloadData()
         }
+    }
+
+    @objc private func refreshNewsData(_ sender: Any) {
+        fetchNewsData()
+    }
+
+    private func fetchNewsData() {
+        getDefaultNews()
+        self.refreshControl.endRefreshing()
     }
 }
 
@@ -54,7 +66,6 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
         cellSelect.selectionStyle = .none
 //        let movieDetailViewController = MovieDetailViewController()
 //        let movie = viewModel.didSelectedRowAt(indexPath: indexPath)
-//        Singleton.movieDetailData = movie
 //        self.navigationController?.navigationBar.isHidden = false
 //        movieDetailViewController.modalPresentationStyle = .fullScreen
 //        navigationController?.pushViewController(movieDetailViewController, animated: true)

@@ -26,7 +26,6 @@ extension ServiceManager {
                 return
             }
             completion(Result.success(decodedResponse))
-//            print(decodedResponse)
         }
     }
 }

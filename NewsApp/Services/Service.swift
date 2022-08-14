@@ -6,7 +6,6 @@
 //
 
 import Alamofire
-import Darwin
 
 public class Services {
 
@@ -14,7 +13,7 @@ public class Services {
                         fromDate: String,
                         toDate: String,
                         sortBy: String,
-                        completion:@escaping(Swift.Result<NewsListResponseModel, AFError>) -> Void) {
+                        completion: @escaping(Swift.Result<NewsListResponseModel, AFError>) -> Void) {
         ServiceManager.shared.sendRequest(request: NewsListRequestModel(query: query,
                                  fromDate: fromDate,
                                  toDate: toDate,
