@@ -6,6 +6,7 @@
 //
 
 import SnapKit
+import SwiftUI
 import UIKit
 
 extension NewsViewController {
@@ -14,13 +15,19 @@ extension NewsViewController {
         drawDesign()
         navigationBarAppearance()
         makeSearchBar()
+        makeFromDatePicker()
+        makeToDatePicker()
         makeTableView()
     }
 
     func drawDesign() {
+        view.backgroundColor = CustomColor.backGroundColor
+        view.addSubview(fromDatePicker)
+        view.addSubview(toDatePicker)
         view.addSubview(tableView)
         tableView.addSubview(refreshControl)
         refreshControl.attributedTitle = NSAttributedString(string: "Fetching News Data")
+        refreshControl.overrideUserInterfaceStyle = .dark
         refreshControl.tintColor = CustomColor.titleColor
     }
 
@@ -33,6 +40,30 @@ extension NewsViewController {
         searchBar.searchBar.searchTextField.textColor = CustomColor.textColor
     }
 
+    func makeFromDatePicker() {
+        fromDatePicker.tintColor = CustomColor.textColor
+        fromDatePicker.backgroundColor = CustomColor.backGroundColor
+        fromDatePicker.layer.cornerRadius = 15
+        fromDatePicker.datePickerMode = .date
+        fromDatePicker.overrideUserInterfaceStyle = .dark
+        fromDatePicker.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide).offset(8)
+            make.left.equalToSuperview().offset(16)
+        }
+    }
+
+    func makeToDatePicker() {
+        toDatePicker.tintColor = CustomColor.titleColor
+        toDatePicker.backgroundColor = CustomColor.backGroundColor
+        toDatePicker.layer.cornerRadius = 15
+        toDatePicker.datePickerMode = .countDownTimer
+        toDatePicker.datePickerMode = .date
+        toDatePicker.overrideUserInterfaceStyle = .dark
+        toDatePicker.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide).offset(8)
+            make.right.equalToSuperview().offset(-16)
+        }
+    }
     func makeTableView() {
         tableView.backgroundColor = CustomColor.backGroundColor
         tableView.delegate = self
@@ -42,7 +73,10 @@ extension NewsViewController {
         tableView.register(NewsCell.self, forCellReuseIdentifier: NewsCell.newsCell)
         tableView.separatorStyle = .none
         tableView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.top.equalTo(fromDatePicker.snp.bottomMargin).offset(16)
+            make.left.equalToSuperview().offset(8)
+            make.right.equalToSuperview().offset(-8)
+            make.bottom.equalToSuperview().offset(44)
         }
     }
 

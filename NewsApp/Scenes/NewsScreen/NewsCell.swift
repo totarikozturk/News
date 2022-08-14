@@ -19,6 +19,7 @@ class NewsCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
         configure()
+        selectionStyle = .none
     }
 
     required init?(coder: NSCoder) {

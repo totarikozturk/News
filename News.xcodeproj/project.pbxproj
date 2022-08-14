@@ -205,8 +205,8 @@
 			isa = PBXGroup;
 			children = (
 				D0DB46D82891AF2C00AA5A92 /* APIKey.swift */,
-				D0DB46F028989F5E00AA5A92 /* ServiceManager.swift */,
 				D0DB46F228989FC500AA5A92 /* Service.swift */,
+				D0DB46F028989F5E00AA5A92 /* ServiceManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -232,11 +232,11 @@
 		D02E9753288CAE3B00424B56 /* NewsScreen */ = {
 			isa = PBXGroup;
 			children = (
-				D02E9756288CAE8500424B56 /* NewsViewController.swift */,
-				D0DB46F42898A3D900AA5A92 /* NewsViewModel.swift */,
 				D0DB46F62899D31D00AA5A92 /* NewsCell.swift */,
 				D0DB46F82899DAFB00AA5A92 /* NewsCell+UI.swift */,
+				D02E9756288CAE8500424B56 /* NewsViewController.swift */,
 				D0DB46FA2899DEBE00AA5A92 /* NewsViewController+UI.swift */,
+				D0DB46F42898A3D900AA5A92 /* NewsViewModel.swift */,
 			);
 			path = NewsScreen;
 			sourceTree = "<group>";

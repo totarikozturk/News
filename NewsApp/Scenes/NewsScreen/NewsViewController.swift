@@ -12,12 +12,13 @@ class NewsViewController: UIViewController {
     let tableView = UITableView()
     let searchBar = UISearchController()
     let refreshControl = UIRefreshControl()
+    let fromDatePicker = UIDatePicker()
+    let toDatePicker = UIDatePicker()
 
     private let viewModel = NewsViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.systemTeal
 
         refreshControl.addTarget(self, action: #selector(refreshNewsData(_:)), for: .valueChanged)
         configureView()
@@ -25,13 +26,12 @@ class NewsViewController: UIViewController {
     }
 
     func getDefaultNews() {
-        let query = "everything"
+        let query = "fener"
         let fromDate = "2022-08-14"
-        let toDate = "2022-07-14"
+        let toDate = "2022-08-15"
         let sortBy = "popularity"
 
         viewModel.newsList(query: query, fromDate: fromDate, toDate: toDate, sortBy: sortBy) { [weak self] in
-            print(self as Any)
             self?.tableView.reloadData()
         }
     }
@@ -46,6 +46,7 @@ class NewsViewController: UIViewController {
     }
 }
 
+// MARK: UITableViewDelegate, UITableViewDataSource
 extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -55,15 +56,13 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: NewsCell.newsCell,
                                                        for: indexPath) as? NewsCell else { return UITableViewCell() }
-        cell.selectionStyle = .none
         let news = viewModel.cellForRowAt(indexPath: indexPath)
         cell.setCellWithValuesOf(news)
         return cell
     }
 //
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let cellSelect: UITableViewCell = tableView.cellForRow(at: indexPath as IndexPath) else { return }
-        cellSelect.selectionStyle = .none
+//        guard let cellSelect: UITableViewCell = tableView.cellForRow(at: indexPath as IndexPath) else { return }
 //        let movieDetailViewController = MovieDetailViewController()
 //        let movie = viewModel.didSelectedRowAt(indexPath: indexPath)
 //        self.navigationController?.navigationBar.isHidden = false
@@ -71,7 +70,7 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
 //        navigationController?.pushViewController(movieDetailViewController, animated: true)
     }
 }
-
+// MARK: UISearchBarDelegate, UISearchResultsUpdating
 extension NewsViewController: UISearchBarDelegate, UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         guard let text = searchController.searchBar.text,
@@ -80,4 +79,13 @@ extension NewsViewController: UISearchBarDelegate, UISearchResultsUpdating {
 //            self.tableView.reloadData()
 //        }
     }
+}
+
+// MARK: DateFormatter
+extension DateFormatter {
+    static var filterDateFormat: DateFormatter = {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            return dateFormatter
+        }()
 }
