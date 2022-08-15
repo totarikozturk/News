@@ -28,7 +28,7 @@ extension NewsViewController {
         view.addSubview(toDatePicker)
         view.addSubview(tableView)
         tableView.addSubview(refreshControl)
-        refreshControl.attributedTitle = NSAttributedString(string: "Fetching News Data")
+        refreshControl.attributedTitle = NSAttributedString(string: "Home.fetchingNewsData".localized)
         refreshControl.overrideUserInterfaceStyle = .dark
         refreshControl.tintColor = CustomColor.titleColor
     }
@@ -36,7 +36,7 @@ extension NewsViewController {
 // MARK: makeSearchBar
     func makeSearchBar() {
         searchBar.searchBar.searchBarStyle = .minimal
-        searchBar.searchBar.placeholder = Texts.searchBarPlaceHolderText
+        searchBar.searchBar.placeholder = "Home.searchBarPlaceHolderText".localized
         searchBar.searchResultsUpdater = self
         searchBar.searchBar.tintColor = CustomColor.textColor
         searchBar.searchBar.barTintColor = CustomColor.textColor
@@ -69,7 +69,7 @@ extension NewsViewController {
             make.right.equalToSuperview().offset(-16)
         }
     }
-    
+
 // MARK: makeTableView
     func makeTableView() {
         tableView.backgroundColor = CustomColor.backGroundColor
@@ -87,7 +87,7 @@ extension NewsViewController {
         }
     }
 
-//MARK: navigationBarAppearance
+// MARK: navigationBarAppearance
     func navigationBarAppearance() {
         appearance.configureWithOpaqueBackground()
         appearance.backgroundColor = CustomColor.backGroundColor
@@ -99,7 +99,7 @@ extension NewsViewController {
         navigationController?.navigationBar.barStyle = .default
         navigationController?.navigationBar.backgroundColor = CustomColor.backGroundColor
         navigationController?.navigationBar.prefersLargeTitles = false
-        navigationItem.title = Titles.newsViewTitle
+        navigationItem.title = "Home.newsViewTitle".localized
         navigationItem.titleView?.tintColor = CustomColor.titleColor
         navigationController?.navigationBar.tintColor = .systemBlue
         navigationItem.searchController = searchBar

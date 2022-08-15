@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  News
+
+  Created by TarıkOzturk on 15.08.2022.
+  
+*/
+
+Home.newsTabTitle = "Haberler";
+Home.bookMarkTabTitle = "Favoriler";
+Home.newsViewTitle = "Senin için Haberler";
+Home.searchBarPlaceHolderText = "Aramak istediğni haber...";
+Home.fetchingNewsData = "Haberler yükleniyor";
+Splash.appTitle = "HABERLER";

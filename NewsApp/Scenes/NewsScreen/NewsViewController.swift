@@ -27,7 +27,7 @@ class NewsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        getNews()
+//        getNews()
     }
 
     private func getNews() {
@@ -86,6 +86,6 @@ extension NewsViewController: UISearchBarDelegate, UISearchResultsUpdating {
         guard let text = searchController.searchBar.text,
                       text.trimmingCharacters(in: CharacterSet.whitespaces).count >= 1  else { return }
         viewModel.searchQuery = text
-        getNews()
+//        getNews()
     }
 }

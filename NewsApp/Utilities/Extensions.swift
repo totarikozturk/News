@@ -15,3 +15,10 @@ extension DateFormatter {
             return dateFormatter
         }()
 }
+
+// MARK: String for localization
+extension String {
+    var localized: String {
+        NSLocalizedString(self, comment: "")
+    }
+}

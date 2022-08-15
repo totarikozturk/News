@@ -17,7 +17,7 @@ extension SplashViewController {
     }
 
     func makeAppTitle() {
-        appTitle.text = "N E W S"
+        appTitle.text = "Splash.appTitle".localized
         appTitle.textColor = CustomColor.titleColor
         appTitle.font = .systemFont(ofSize: 72, weight: .bold )
         appTitle.snp.makeConstraints { make in
@@ -30,8 +30,8 @@ extension SplashViewController {
         let tabbarViewController = UITabBarController()
         let viewController1 = UINavigationController(rootViewController: NewsViewController())
         let viewController2 = UINavigationController(rootViewController: BookMarkViewController())
-        viewController1.title = Titles.newsTabTitle
-        viewController2.title = Titles.bookMarkTabTitle
+        viewController1.title = "Home.newsTabTitle".localized
+        viewController2.title = "Home.bookMarkTabTitle".localized
         tabbarViewController.setViewControllers([viewController1, viewController2], animated: false)
 
         guard let items = tabbarViewController.tabBar.items else { return }

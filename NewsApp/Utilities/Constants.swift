@@ -34,21 +34,3 @@ enum ErrorCode {
     static let errorProcessingJson = "Error processing json data:"
     static let fatalInitError = "has not been implemented"
 }
-
-enum Titles {
-//    static let appTitle = NSLocalizedString("Movies", comment: "App title")
-    static let newsTabTitle = NSLocalizedString("News", comment: "Tabbar news button")
-    static let bookMarkTabTitle = NSLocalizedString("Bookmarks", comment: "Tabbar bookmark button")
-    static let newsViewTitle = NSLocalizedString("News You Looking For ?", comment: "NewsView Navigation Title")
-//    static let bookmarkViewTitle = NSLocalizedString("Your Favourite Movies",
-//                                                     comment: "BookmarkView Navigation Title")
-//    static let detailReleaseTitle = NSLocalizedString("Release Date:",
-//                                                      comment: "MovieDetailView relase date text title")
-//    static let detailRateTitle = NSLocalizedString("Rate:",
-//                                                   comment: "MovieDetailView rate text title")
-}
-
-enum Texts {
-    static let searchBarPlaceHolderText = NSLocalizedString("Search news...",
-                                                            comment: "Searchbar Placeholder text")
-}
