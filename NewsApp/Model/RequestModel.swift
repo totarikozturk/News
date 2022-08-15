@@ -46,8 +46,8 @@ extension RequestModel {
 
         for parameter in parameters {
             if let value = parameter.value as? String {
-                endpoint.append("&\(parameter.key)=\(parameter.value!)")
-                print(value)
+//                endpoint.append("&\(parameter.key)=\(parameter.value!)")
+                endpoint.append("&\(parameter.key)=\(value)")
             }
         }
         var request = URLRequest(url: URL(string: endpoint)!)

@@ -10,9 +10,12 @@ import Foundation
 class NewsViewModel {
 
     var newsList = [Article]()
+    var searchQuery = String()
+    var fromDate = String()
+    var toDate = String()
 
-    func newsList(query: String, fromDate: String, toDate: String, sortBy: String, completion: @escaping(() -> Void)) {
-        Services.newsList(query: query, fromDate: fromDate, toDate: toDate, sortBy: sortBy) { result in
+    func newsList(query: String, fromDate: String, toDate: String, completion: @escaping(() -> Void)) {
+        Services.newsList(query: query, fromDate: fromDate, toDate: toDate) { result in
             switch result {
             case .success(let response):
                 if response.articles != nil {
@@ -23,6 +26,14 @@ class NewsViewModel {
             case.failure(let error):
                 print(error.localizedDescription)
             }
+        }
+    }
+
+    func chooseQuery() -> String {
+        if searchQuery.isEmpty {
+            return "everything"
+        } else {
+            return searchQuery
         }
     }
 

@@ -22,27 +22,37 @@ class NewsViewController: UIViewController {
 
         refreshControl.addTarget(self, action: #selector(refreshNewsData(_:)), for: .valueChanged)
         configureView()
-        getDefaultNews()
     }
 
-    func getDefaultNews() {
-        let query = "fener"
-        let fromDate = "2022-08-14"
-        let toDate = "2022-08-15"
-        let sortBy = "popularity"
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
 
-        viewModel.newsList(query: query, fromDate: fromDate, toDate: toDate, sortBy: sortBy) { [weak self] in
+        getNews()
+    }
+
+    private func getNews() {
+        let query = viewModel.chooseQuery()
+        print(viewModel.chooseQuery())
+        viewModel.newsList(query: query, fromDate: viewModel.fromDate, toDate: viewModel.toDate) { [weak self] in
             self?.tableView.reloadData()
         }
     }
 
     @objc private func refreshNewsData(_ sender: Any) {
         fetchNewsData()
+        getSearchDate()
     }
 
     private func fetchNewsData() {
-        getDefaultNews()
+        getNews()
         self.refreshControl.endRefreshing()
+    }
+
+    private func getSearchDate() {
+        let fromDate = DateFormatter.filterDateFormat.string(from: fromDatePicker.date)
+        let toDate = DateFormatter.filterDateFormat.string(from: toDatePicker.date)
+        viewModel.fromDate = fromDate
+        viewModel.toDate = toDate
     }
 }
 
@@ -75,17 +85,7 @@ extension NewsViewController: UISearchBarDelegate, UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         guard let text = searchController.searchBar.text,
                       text.trimmingCharacters(in: CharacterSet.whitespaces).count >= 1  else { return }
-//        viewModel.fetchSearchMoviesData(for: text) {
-//            self.tableView.reloadData()
-//        }
+        viewModel.searchQuery = text
+        getNews()
     }
-}
-
-// MARK: DateFormatter
-extension DateFormatter {
-    static var filterDateFormat: DateFormatter = {
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd"
-            return dateFormatter
-        }()
 }

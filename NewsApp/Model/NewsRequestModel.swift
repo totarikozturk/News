@@ -11,13 +11,11 @@ class NewsListRequestModel: RequestModel {
     private let query: String
     private let fromDate: String
     private let toDate: String
-    private let sortBy: String
 
-    init(query: String, fromDate: String, toDate: String, sortBy: String) {
+    init(query: String, fromDate: String, toDate: String) {
         self.query = query
         self.fromDate = fromDate
         self.toDate = toDate
-        self.sortBy = sortBy
         super.init()
     }
 
@@ -33,8 +31,7 @@ class NewsListRequestModel: RequestModel {
         [
             "q": self.query,
             "from": self.fromDate,
-            "to": self.toDate,
-            "sortBy": self.sortBy
+            "to": self.toDate
         ]
     }
 }

@@ -33,6 +33,7 @@
 		D0DB46F72899D31D00AA5A92 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB46F62899D31D00AA5A92 /* NewsCell.swift */; };
 		D0DB46F92899DAFB00AA5A92 /* NewsCell+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB46F82899DAFB00AA5A92 /* NewsCell+UI.swift */; };
 		D0DB46FB2899DEBE00AA5A92 /* NewsViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB46FA2899DEBE00AA5A92 /* NewsViewController+UI.swift */; };
+		D0FB9F0728AA41CB0092AB90 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FB9F0628AA41CB0092AB90 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		D0DB46F62899D31D00AA5A92 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		D0DB46F82899DAFB00AA5A92 /* NewsCell+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsCell+UI.swift"; sourceTree = "<group>"; };
 		D0DB46FA2899DEBE00AA5A92 /* NewsViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsViewController+UI.swift"; sourceTree = "<group>"; };
+		D0FB9F0628AA41CB0092AB90 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				D02E975C288CAFC700424B56 /* Constants.swift */,
+				D0FB9F0628AA41CB0092AB90 /* Extensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				D02E9757288CAE8500424B56 /* NewsViewController.swift in Sources */,
 				D0DB46F92899DAFB00AA5A92 /* NewsCell+UI.swift in Sources */,
 				D02E974F288CA99000424B56 /* SplashViewController.swift in Sources */,
+				D0FB9F0728AA41CB0092AB90 /* Extensions.swift in Sources */,
 				D02E9752288CAB7C00424B56 /* SplashViewModal.swift in Sources */,
 				D0DB46EF2898913100AA5A92 /* NewsRequestModel.swift in Sources */,
 				D02E975D288CAFC700424B56 /* Constants.swift in Sources */,

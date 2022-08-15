@@ -10,12 +10,14 @@ import UIKit
 
 extension NewsCell {
 
+// MARK: configure
     func configure() {
         drawDesign()
         makeNewsImage()
         makeNewsTitle()
     }
 
+// MARK: drawDesign
     func drawDesign() {
         contentView.backgroundColor = CustomColor.contentViewColor
         contentView.layer.cornerRadius = 12
@@ -25,6 +27,7 @@ extension NewsCell {
         addSubview(newsTitle)
     }
 
+// MARK: layoutSubviews
     override func layoutSubviews() {
         super.layoutSubviews()
         let bottomSpace: CGFloat = 8.0
@@ -35,6 +38,7 @@ extension NewsCell {
                                                               right: 0))
     }
 
+// MARK: makeNewsImage
     func makeNewsImage() {
         newsImage.layer.cornerRadius = 16
         newsImage.clipsToBounds = true
@@ -46,9 +50,10 @@ extension NewsCell {
         }
     }
 
+// MARK: makeNewsTitle
     func makeNewsTitle() {
-        newsTitle.lineBreakMode = .byWordWrapping
-        newsTitle.numberOfLines = 0
+        newsTitle.lineBreakMode = .byTruncatingTail
+        newsTitle.numberOfLines = 2
         newsTitle.textAlignment = .left
         newsTitle.minimumScaleFactor = 1
         newsTitle.adjustsFontSizeToFitWidth = true

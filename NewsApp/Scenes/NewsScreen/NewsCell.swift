@@ -9,6 +9,7 @@ import Kingfisher
 import UIKit
 
 class NewsCell: UITableViewCell {
+
     static let newsCell = CellIdent.newsCell
     private let viewModel = NewsViewModel()
 

@@ -11,6 +11,7 @@ import UIKit
 
 extension NewsViewController {
 
+// MARK: configureView
     func configureView() {
         drawDesign()
         navigationBarAppearance()
@@ -20,6 +21,7 @@ extension NewsViewController {
         makeTableView()
     }
 
+// MARK: drawDesign
     func drawDesign() {
         view.backgroundColor = CustomColor.backGroundColor
         view.addSubview(fromDatePicker)
@@ -31,6 +33,7 @@ extension NewsViewController {
         refreshControl.tintColor = CustomColor.titleColor
     }
 
+// MARK: makeSearchBar
     func makeSearchBar() {
         searchBar.searchBar.searchBarStyle = .minimal
         searchBar.searchBar.placeholder = Texts.searchBarPlaceHolderText
@@ -40,6 +43,7 @@ extension NewsViewController {
         searchBar.searchBar.searchTextField.textColor = CustomColor.textColor
     }
 
+// MARK: makeFromDatePicker
     func makeFromDatePicker() {
         fromDatePicker.tintColor = CustomColor.textColor
         fromDatePicker.backgroundColor = CustomColor.backGroundColor
@@ -52,6 +56,7 @@ extension NewsViewController {
         }
     }
 
+// MARK: makeToDatePicker
     func makeToDatePicker() {
         toDatePicker.tintColor = CustomColor.titleColor
         toDatePicker.backgroundColor = CustomColor.backGroundColor
@@ -64,6 +69,8 @@ extension NewsViewController {
             make.right.equalToSuperview().offset(-16)
         }
     }
+    
+// MARK: makeTableView
     func makeTableView() {
         tableView.backgroundColor = CustomColor.backGroundColor
         tableView.delegate = self
@@ -76,10 +83,11 @@ extension NewsViewController {
             make.top.equalTo(fromDatePicker.snp.bottomMargin).offset(16)
             make.left.equalToSuperview().offset(8)
             make.right.equalToSuperview().offset(-8)
-            make.bottom.equalToSuperview().offset(44)
+            make.bottom.equalToSuperview().offset(-54)
         }
     }
 
+//MARK: navigationBarAppearance
     func navigationBarAppearance() {
         appearance.configureWithOpaqueBackground()
         appearance.backgroundColor = CustomColor.backGroundColor

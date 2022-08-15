@@ -12,12 +12,10 @@ public class Services {
     class func newsList(query: String,
                         fromDate: String,
                         toDate: String,
-                        sortBy: String,
                         completion: @escaping(Swift.Result<NewsListResponseModel, AFError>) -> Void) {
         ServiceManager.shared.sendRequest(request: NewsListRequestModel(query: query,
                                  fromDate: fromDate,
-                                 toDate: toDate,
-                                 sortBy: sortBy )) { result in
+                                 toDate: toDate)) { result in
             completion(result)
         }
     }
