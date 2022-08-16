@@ -9,6 +9,7 @@ import UIKit
 
 enum CellIdent {
     static let newsCell = "NewsCell"
+    static let bookMarkCell = "BookMarkCell"
 }
 
 enum ViewSymbols {
@@ -33,4 +34,8 @@ enum ErrorCode {
     static let emptyData = "Empty Data"
     static let errorProcessingJson = "Error processing json data:"
     static let fatalInitError = "has not been implemented"
+}
+
+struct UserdefaultsCode {
+    static let codableKey = "CodableKey"
 }

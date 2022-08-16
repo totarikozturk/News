@@ -24,6 +24,9 @@
 		D02E975D288CAFC700424B56 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02E975C288CAFC700424B56 /* Constants.swift */; };
 		D057FDEF28AAD4AC00BEFB74 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D057FDED28AAD34600BEFB74 /* Localizable.strings */; };
 		D057FDF328AADF4000BEFB74 /* NewsDetailViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D057FDF228AADF4000BEFB74 /* NewsDetailViewController+UI.swift */; };
+		D0D94AA128AC03220097B9BD /* BookMarkViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D94AA028AC03220097B9BD /* BookMarkViewController+UI.swift */; };
+		D0D94AA328AC05560097B9BD /* BookMarkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D94AA228AC05560097B9BD /* BookMarkCell.swift */; };
+		D0D94AA528AC05DF0097B9BD /* BookMarkCell+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D94AA428AC05DF0097B9BD /* BookMarkCell+UI.swift */; };
 		D0DB46D72891630A00AA5A92 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D0DB46D62891630A00AA5A92 /* Alamofire */; };
 		D0DB46D92891AF2C00AA5A92 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB46D82891AF2C00AA5A92 /* APIKey.swift */; };
 		D0DB46DB2891B4E900AA5A92 /* NewsResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB46DA2891B4E900AA5A92 /* NewsResponseModel.swift */; };
@@ -35,6 +38,8 @@
 		D0DB46F72899D31D00AA5A92 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB46F62899D31D00AA5A92 /* NewsCell.swift */; };
 		D0DB46F92899DAFB00AA5A92 /* NewsCell+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB46F82899DAFB00AA5A92 /* NewsCell+UI.swift */; };
 		D0DB46FB2899DEBE00AA5A92 /* NewsViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB46FA2899DEBE00AA5A92 /* NewsViewController+UI.swift */; };
+		D0E0F3A028AC2B12004A4CFD /* BookMarkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E0F39F28AC2B12004A4CFD /* BookMarkViewModel.swift */; };
+		D0E0F3A228AC2DA5004A4CFD /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E0F3A128AC2DA5004A4CFD /* AppManager.swift */; };
 		D0FB9F0728AA41CB0092AB90 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FB9F0628AA41CB0092AB90 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +81,9 @@
 		D057FDEC28AAD34600BEFB74 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D057FDEE28AAD35B00BEFB74 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D057FDF228AADF4000BEFB74 /* NewsDetailViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsDetailViewController+UI.swift"; sourceTree = "<group>"; };
+		D0D94AA028AC03220097B9BD /* BookMarkViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookMarkViewController+UI.swift"; sourceTree = "<group>"; };
+		D0D94AA228AC05560097B9BD /* BookMarkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkCell.swift; sourceTree = "<group>"; };
+		D0D94AA428AC05DF0097B9BD /* BookMarkCell+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookMarkCell+UI.swift"; sourceTree = "<group>"; };
 		D0DB46D2288D63D500AA5A92 /* News.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = News.entitlements; sourceTree = "<group>"; };
 		D0DB46D82891AF2C00AA5A92 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		D0DB46DA2891B4E900AA5A92 /* NewsResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsResponseModel.swift; sourceTree = "<group>"; };
@@ -87,6 +95,8 @@
 		D0DB46F62899D31D00AA5A92 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		D0DB46F82899DAFB00AA5A92 /* NewsCell+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsCell+UI.swift"; sourceTree = "<group>"; };
 		D0DB46FA2899DEBE00AA5A92 /* NewsViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsViewController+UI.swift"; sourceTree = "<group>"; };
+		D0E0F39F28AC2B12004A4CFD /* BookMarkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkViewModel.swift; sourceTree = "<group>"; };
+		D0E0F3A128AC2DA5004A4CFD /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		D0FB9F0628AA41CB0092AB90 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -173,6 +183,7 @@
 			children = (
 				D02E970D288CA1DF00424B56 /* AppDelegate.swift */,
 				D02E970F288CA1DF00424B56 /* SceneDelegate.swift */,
+				D0E0F3A128AC2DA5004A4CFD /* AppManager.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -263,6 +274,10 @@
 			isa = PBXGroup;
 			children = (
 				D02E975A288CAF0C00424B56 /* BookMarkViewController.swift */,
+				D0D94AA028AC03220097B9BD /* BookMarkViewController+UI.swift */,
+				D0D94AA228AC05560097B9BD /* BookMarkCell.swift */,
+				D0D94AA428AC05DF0097B9BD /* BookMarkCell+UI.swift */,
+				D0E0F39F28AC2B12004A4CFD /* BookMarkViewModel.swift */,
 			);
 			path = BookMarkScreen;
 			sourceTree = "<group>";
@@ -430,9 +445,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0DB46DB2891B4E900AA5A92 /* NewsResponseModel.swift in Sources */,
+				D0D94AA328AC05560097B9BD /* BookMarkCell.swift in Sources */,
 				D0DB46FB2899DEBE00AA5A92 /* NewsViewController+UI.swift in Sources */,
 				D02E970E288CA1DF00424B56 /* AppDelegate.swift in Sources */,
+				D0E0F3A028AC2B12004A4CFD /* BookMarkViewModel.swift in Sources */,
 				D0DB46ED289890A200AA5A92 /* RequestModel.swift in Sources */,
+				D0D94AA128AC03220097B9BD /* BookMarkViewController+UI.swift in Sources */,
 				D02E9710288CA1DF00424B56 /* SceneDelegate.swift in Sources */,
 				D02E974E288CA99000424B56 /* MakeSplashView.swift in Sources */,
 				D02E9759288CAEDF00424B56 /* NewsDetailViewController.swift in Sources */,
@@ -442,8 +460,10 @@
 				D0DB46F72899D31D00AA5A92 /* NewsCell.swift in Sources */,
 				D0DB46F328989FC500AA5A92 /* Service.swift in Sources */,
 				D02E9757288CAE8500424B56 /* NewsViewController.swift in Sources */,
+				D0D94AA528AC05DF0097B9BD /* BookMarkCell+UI.swift in Sources */,
 				D0DB46F92899DAFB00AA5A92 /* NewsCell+UI.swift in Sources */,
 				D02E974F288CA99000424B56 /* SplashViewController.swift in Sources */,
+				D0E0F3A228AC2DA5004A4CFD /* AppManager.swift in Sources */,
 				D0FB9F0728AA41CB0092AB90 /* Extensions.swift in Sources */,
 				D02E9752288CAB7C00424B56 /* SplashViewModal.swift in Sources */,
 				D057FDF328AADF4000BEFB74 /* NewsDetailViewController+UI.swift in Sources */,

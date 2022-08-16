@@ -12,3 +12,4 @@ Home.newsViewTitle = "News For You";
 Home.searchBarPlaceHolderText = "Search news...";
 Home.fetchingNewsData = "Fetching News Data";
 Splash.appTitle = "N E W S";
+BookMark.viewTitle = "Favorite News";

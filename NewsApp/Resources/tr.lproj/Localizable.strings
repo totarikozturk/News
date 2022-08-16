@@ -12,3 +12,4 @@ Home.newsViewTitle = "Senin için Haberler";
 Home.searchBarPlaceHolderText = "Aramak istediğni haber...";
 Home.fetchingNewsData = "Haberler yükleniyor";
 Splash.appTitle = "HABERLER";
+BookMark.newsViewTitle = "Favori Haberler";

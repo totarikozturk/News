@@ -1,21 +1,19 @@
 //
-//  NewsCell.swift
+//  BookMarkCell.swift
 //  News
 //
-//  Created by TarıkOzturk on 3.08.2022.
+//  Created by TarıkOzturk on 16.08.2022.
 //
 
 import Kingfisher
 import UIKit
 
-class NewsCell: UITableViewCell {
+class BookMarkCell: UITableViewCell {
 
-    static let newsCell = CellIdent.newsCell
+    static let bookMarkCell = CellIdent.bookMarkCell
 
     let newsTitle = UILabel()
     let newsImage = UIImageView()
-    let favButton = UIButton()
-    private var bookMarksdata: Article?
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -28,17 +26,7 @@ class NewsCell: UITableViewCell {
         fatalError("\(ErrorCode.fatalInitError)")
     }
 
-    @objc func favButtonTapped(_ sender: UIButton) {
-        sender.isSelected.toggle()
-        if sender.isSelected {
-            favButton.setImage(UIImage(systemName: ViewSymbols.starFill), for: .selected)
-        }
-        Singleton.bookmarksData = self.bookMarksdata
-        Singleton.favButtonTapped = true
-    }
-
     func setCellWithValuesOf(_ news: Article) {
-        self.bookMarksdata = news
         updateUI(title: news.title, image: news.urlToImage)
     }
 
@@ -48,7 +36,5 @@ class NewsCell: UITableViewCell {
         let url = URL(string: imageString)
         self.newsImage.kf.setImage(with: url)
         self.newsTitle.text = title
-        self.favButton.setImage(UIImage(systemName: ViewSymbols.star), for: .normal)
-        self.favButton.addTarget(self, action: #selector(favButtonTapped), for: .touchUpInside)
     }
 }
