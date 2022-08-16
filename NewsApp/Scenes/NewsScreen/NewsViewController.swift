@@ -16,18 +16,14 @@ class NewsViewController: UIViewController {
     let toDatePicker = UIDatePicker()
 
     private let viewModel = NewsViewModel()
+    private var newsDetailData: Article?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         refreshControl.addTarget(self, action: #selector(refreshNewsData(_:)), for: .valueChanged)
         configureView()
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-//        getNews()
+        getNews()
     }
 
     private func getNews() {
@@ -70,22 +66,30 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
         cell.setCellWithValuesOf(news)
         return cell
     }
-//
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        guard let cellSelect: UITableViewCell = tableView.cellForRow(at: indexPath as IndexPath) else { return }
-//        let movieDetailViewController = MovieDetailViewController()
-//        let movie = viewModel.didSelectedRowAt(indexPath: indexPath)
-//        self.navigationController?.navigationBar.isHidden = false
-//        movieDetailViewController.modalPresentationStyle = .fullScreen
-//        navigationController?.pushViewController(movieDetailViewController, animated: true)
+        self.newsDetailData = viewModel.didSelectedRowAt(indexPath: indexPath)
+        openDetailView()
     }
 }
+
 // MARK: UISearchBarDelegate, UISearchResultsUpdating
 extension NewsViewController: UISearchBarDelegate, UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         guard let text = searchController.searchBar.text,
                       text.trimmingCharacters(in: CharacterSet.whitespaces).count >= 1  else { return }
         viewModel.searchQuery = text
-//        getNews()
+        getNews()
+    }
+}
+
+// MARK: Open DetailView
+private extension NewsViewController {
+    func openDetailView() {
+        guard let detailData = self.newsDetailData else { return }
+        let newsDetailViewController = NewsDetailViewController(newsData: detailData)
+        self.navigationController?.navigationBar.isHidden = false
+        newsDetailViewController.modalPresentationStyle = .fullScreen
+        navigationController?.pushViewController(newsDetailViewController, animated: true)
     }
 }

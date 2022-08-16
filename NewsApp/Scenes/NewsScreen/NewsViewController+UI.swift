@@ -61,7 +61,6 @@ extension NewsViewController {
         toDatePicker.tintColor = CustomColor.titleColor
         toDatePicker.backgroundColor = CustomColor.backGroundColor
         toDatePicker.layer.cornerRadius = 15
-        toDatePicker.datePickerMode = .countDownTimer
         toDatePicker.datePickerMode = .date
         toDatePicker.overrideUserInterfaceStyle = .dark
         toDatePicker.snp.makeConstraints { make in
