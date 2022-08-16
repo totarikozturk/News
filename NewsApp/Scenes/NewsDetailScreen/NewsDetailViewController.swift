@@ -43,5 +43,6 @@ class NewsDetailViewController: UIViewController {
         authorLabel.text = news.author
         descriptionLabel.text = news.articleDescription
         contentLabel.text = news.content
+        navigationItem.title = news.publishedAt
     }
 }

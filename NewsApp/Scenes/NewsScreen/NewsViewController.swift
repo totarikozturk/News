@@ -16,7 +16,6 @@ class NewsViewController: UIViewController {
     let toDatePicker = UIDatePicker()
 
     private let viewModel = NewsViewModel()
-    private var newsDetailData: Article?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,8 +67,8 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.newsDetailData = viewModel.didSelectedRowAt(indexPath: indexPath)
-        openDetailView()
+        let detailData = viewModel.didSelectedRowAt(indexPath: indexPath)
+        openDetailView(detailData)
     }
 }
 
@@ -85,8 +84,8 @@ extension NewsViewController: UISearchBarDelegate, UISearchResultsUpdating {
 
 // MARK: Open DetailView
 private extension NewsViewController {
-    func openDetailView() {
-        guard let detailData = self.newsDetailData else { return }
+    func openDetailView(_ data: Article?) {
+        guard let detailData = data else { return }
         let newsDetailViewController = NewsDetailViewController(newsData: detailData)
         self.navigationController?.navigationBar.isHidden = false
         newsDetailViewController.modalPresentationStyle = .fullScreen

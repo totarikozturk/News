@@ -6,7 +6,6 @@
 //
 
 import SnapKit
-import SwiftUI
 import UIKit
 
 extension NewsViewController {
@@ -74,7 +73,7 @@ extension NewsViewController {
         tableView.backgroundColor = CustomColor.backGroundColor
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight = 240
+        tableView.rowHeight = 256
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(NewsCell.self, forCellReuseIdentifier: NewsCell.newsCell)
         tableView.separatorStyle = .none

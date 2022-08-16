@@ -15,6 +15,7 @@ extension NewsCell {
         drawDesign()
         makeNewsImage()
         makeNewsTitle()
+        makeFavButton()
     }
 
 // MARK: drawDesign
@@ -25,6 +26,7 @@ extension NewsCell {
         backgroundColor = CustomColor.backGroundColor
         addSubview(newsImage)
         addSubview(newsTitle)
+        contentView.addSubview(favButton)
     }
 
 // MARK: layoutSubviews
@@ -44,7 +46,7 @@ extension NewsCell {
         newsImage.clipsToBounds = true
         newsImage.snp.makeConstraints { make in
             make.top.equalToSuperview()
-            make.bottom.equalToSuperview().offset(-52)
+            make.bottom.equalToSuperview().offset(-64)
             make.left.equalToSuperview()
             make.right.equalToSuperview()
         }
@@ -60,9 +62,20 @@ extension NewsCell {
         newsTitle.textColor = CustomColor.textColor
         newsTitle.font = .boldSystemFont(ofSize: 16)
         newsTitle.snp.makeConstraints { make in
-            make.top.equalTo(newsImage.snp.bottomMargin).offset(8)
+            make.top.equalTo(newsImage.snp.bottomMargin).offset(12)
             make.left.equalTo(newsImage.snp.left).offset(12)
-            make.right.equalToSuperview()
+            make.right.equalToSuperview().offset(-40)
+            make.bottom.equalToSuperview().offset(-8)
         }
     }
+
+// MARK: makeFavButton
+        func makeFavButton() {
+            favButton.translatesAutoresizingMaskIntoConstraints = false
+            favButton.tintColor = CustomColor.textColor
+            favButton.snp.makeConstraints { make in
+                make.top.equalTo(newsImage.snp.bottom).offset(8)
+                make.right.equalToSuperview().offset(-16)
+            }
+        }
 }

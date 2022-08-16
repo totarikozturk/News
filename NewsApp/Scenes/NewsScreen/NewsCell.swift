@@ -15,6 +15,7 @@ class NewsCell: UITableViewCell {
 
     let newsTitle = UILabel()
     let newsImage = UIImageView()
+    let favButton = UIButton()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -27,6 +28,14 @@ class NewsCell: UITableViewCell {
         fatalError("\(ErrorCode.fatalInitError)")
     }
 
+    @objc func favButtonTapped(_ sender: UIButton) {
+        
+        sender.isSelected.toggle()
+        if sender.isSelected {
+            favButton.setImage(UIImage(systemName: ViewSymbols.starFill), for: .selected)
+        }
+    }
+
     func setCellWithValuesOf(_ news: Article) {
         updateUI(title: news.title, image: news.urlToImage)
     }
@@ -37,5 +46,7 @@ class NewsCell: UITableViewCell {
         let url = URL(string: imageString)
         self.newsImage.kf.setImage(with: url)
         self.newsTitle.text = title
+        self.favButton.setImage(UIImage(systemName: ViewSymbols.star), for: .normal)
+        self.favButton.addTarget(self, action: #selector(favButtonTapped), for: .touchUpInside)
     }
 }
