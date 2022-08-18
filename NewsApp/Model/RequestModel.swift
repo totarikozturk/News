@@ -50,6 +50,7 @@ extension RequestModel {
                 endpoint.append("&\(parameter.key)=\(value)")
             }
         }
+        // endpoint forcecast var
         var request = URLRequest(url: URL(string: endpoint)!)
         request.httpMethod = method.rawValue
 

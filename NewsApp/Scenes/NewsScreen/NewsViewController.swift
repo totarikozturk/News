@@ -27,7 +27,6 @@ class NewsViewController: UIViewController {
 
     private func getNews() {
         let query = viewModel.chooseQuery()
-        print(viewModel.chooseQuery())
         viewModel.newsList(query: query, fromDate: viewModel.fromDate, toDate: viewModel.toDate) { [weak self] in
             self?.tableView.reloadData()
         }
@@ -63,6 +62,9 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
                                                        for: indexPath) as? NewsCell else { return UITableViewCell() }
         let news = viewModel.cellForRowAt(indexPath: indexPath)
         cell.setCellWithValuesOf(news)
+        cell.bookMarkAction = { article in
+            Singleton.shared.bookmarksData = article
+        }
         return cell
     }
 

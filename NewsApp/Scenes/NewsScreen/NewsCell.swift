@@ -17,6 +17,8 @@ class NewsCell: UITableViewCell {
     let favButton = UIButton()
     private var bookMarksdata: Article?
 
+    var bookMarkAction: ((Article) -> Void)?
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
@@ -32,9 +34,10 @@ class NewsCell: UITableViewCell {
         sender.isSelected.toggle()
         if sender.isSelected {
             favButton.setImage(UIImage(systemName: ViewSymbols.starFill), for: .selected)
+        } else {
         }
-        Singleton.bookmarksData = self.bookMarksdata
-        Singleton.favButtonTapped = true
+        bookMarkAction?(bookMarksdata!)
+        Singleton.shared.favButtonTapped = true
     }
 
     func setCellWithValuesOf(_ news: Article) {
@@ -48,7 +51,6 @@ class NewsCell: UITableViewCell {
         let url = URL(string: imageString)
         self.newsImage.kf.setImage(with: url)
         self.newsTitle.text = title
-        self.favButton.setImage(UIImage(systemName: ViewSymbols.star), for: .normal)
         self.favButton.addTarget(self, action: #selector(favButtonTapped), for: .touchUpInside)
     }
 }

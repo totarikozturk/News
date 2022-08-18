@@ -71,6 +71,7 @@ extension NewsCell {
 
 // MARK: makeFavButton
         func makeFavButton() {
+            self.favButton.setImage(UIImage(systemName: ViewSymbols.star), for: .normal)
             favButton.translatesAutoresizingMaskIntoConstraints = false
             favButton.tintColor = CustomColor.textColor
             favButton.snp.makeConstraints { make in

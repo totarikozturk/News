@@ -9,6 +9,6 @@ import Foundation
 
 class Singleton {
     static let shared = Singleton()
-    static var bookmarksData: Article?
-    static var favButtonTapped = false
+    var bookmarksData: Article?
+    var favButtonTapped = false
 }

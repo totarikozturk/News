@@ -29,7 +29,7 @@ class BookMarkViewController: UIViewController, SFSafariViewControllerDelegate {
 
     func updateTableViewData() {
         viewModel.addBookmark()
-        Singleton.favButtonTapped = false
+        Singleton.shared.favButtonTapped = false
         viewModel.load()
         tableView.reloadData()
     }
