@@ -34,10 +34,9 @@ class NewsCell: UITableViewCell {
         sender.isSelected.toggle()
         if sender.isSelected {
             favButton.setImage(UIImage(systemName: ViewSymbols.starFill), for: .selected)
-        } else {
         }
         bookMarkAction?(bookMarksdata!)
-        Singleton.shared.favButtonTapped = true
+        AppManager.shared.favButtonTapped = true
     }
 
     func setCellWithValuesOf(_ news: Article) {
@@ -46,7 +45,6 @@ class NewsCell: UITableViewCell {
     }
 
     private func updateUI(title: String?, image: String?) {
-
         guard let imageString = image else { return }
         let url = URL(string: imageString)
         self.newsImage.kf.setImage(with: url)

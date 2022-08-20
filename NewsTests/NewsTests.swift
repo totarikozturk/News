@@ -11,7 +11,6 @@ import XCTest
 class NewsTests: XCTestCase {
 
     func testSuccessParser() {
-
         let json = """
                 {
                 "articles": [
@@ -33,7 +32,6 @@ class NewsTests: XCTestCase {
                 """.data(using: .utf8)!
 
         let news = try! JSONDecoder().decode(Article.self, from: json)
-
         XCTAssertNotNil(news)
     }
 }

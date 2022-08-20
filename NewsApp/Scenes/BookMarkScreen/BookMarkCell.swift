@@ -31,7 +31,6 @@ class BookMarkCell: UITableViewCell {
     }
 
     private func updateUI(title: String?, image: String?) {
-
         guard let imageString = image else { return }
         let url = URL(string: imageString)
         self.newsImage.kf.setImage(with: url)

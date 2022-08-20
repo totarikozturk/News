@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D00D5D8728B15E0B00496C8C /* NewsViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00D5D8628B15E0B00496C8C /* NewsViewController+Extension.swift */; };
+		D00D5D8928B15E8F00496C8C /* BookMarkViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00D5D8828B15E8F00496C8C /* BookMarkViewController+Extension.swift */; };
 		D02E970E288CA1DF00424B56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02E970D288CA1DF00424B56 /* AppDelegate.swift */; };
 		D02E9710288CA1DF00424B56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02E970F288CA1DF00424B56 /* SceneDelegate.swift */; };
 		D02E9717288CA1E100424B56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D02E9716288CA1E100424B56 /* Assets.xcassets */; };
@@ -59,6 +61,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D00D5D8628B15E0B00496C8C /* NewsViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsViewController+Extension.swift"; sourceTree = "<group>"; };
+		D00D5D8828B15E8F00496C8C /* BookMarkViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookMarkViewController+Extension.swift"; sourceTree = "<group>"; };
 		D02E970A288CA1DF00424B56 /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D02E970D288CA1DF00424B56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D02E970F288CA1DF00424B56 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +128,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D00D5D8528B15CFB00496C8C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D0FB9F0628AA41CB0092AB90 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		D02E9701288CA1DF00424B56 = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				D02E973E288CA77400424B56 /* App */,
+				D00D5D8528B15CFB00496C8C /* Extensions */,
 				D02E973F288CA78200424B56 /* Model */,
 				D02E9740288CA78A00424B56 /* Resources */,
 				D02E9741288CA79100424B56 /* Scenes */,
@@ -168,8 +181,8 @@
 			isa = PBXGroup;
 			children = (
 				D02E970D288CA1DF00424B56 /* AppDelegate.swift */,
-				D02E970F288CA1DF00424B56 /* SceneDelegate.swift */,
 				D0E0F3A128AC2DA5004A4CFD /* AppManager.swift */,
+				D02E970F288CA1DF00424B56 /* SceneDelegate.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -187,9 +200,9 @@
 		D02E9740288CA78A00424B56 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D02E9716288CA1E100424B56 /* Assets.xcassets */,
-				D02E971B288CA1E100424B56 /* Info.plist */,
 				D0DB46D2288D63D500AA5A92 /* News.entitlements */,
+				D02E971B288CA1E100424B56 /* Info.plist */,
+				D02E9716288CA1E100424B56 /* Assets.xcassets */,
 				D057FDED28AAD34600BEFB74 /* Localizable.strings */,
 			);
 			path = Resources;
@@ -220,7 +233,6 @@
 			isa = PBXGroup;
 			children = (
 				D02E975C288CAFC700424B56 /* Constants.swift */,
-				D0FB9F0628AA41CB0092AB90 /* Extensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -241,6 +253,7 @@
 				D0DB46F62899D31D00AA5A92 /* NewsCell.swift */,
 				D0DB46F82899DAFB00AA5A92 /* NewsCell+UI.swift */,
 				D02E9756288CAE8500424B56 /* NewsViewController.swift */,
+				D00D5D8628B15E0B00496C8C /* NewsViewController+Extension.swift */,
 				D0DB46FA2899DEBE00AA5A92 /* NewsViewController+UI.swift */,
 				D0DB46F42898A3D900AA5A92 /* NewsViewModel.swift */,
 			);
@@ -259,10 +272,11 @@
 		D02E9755288CAE5B00424B56 /* BookMarkScreen */ = {
 			isa = PBXGroup;
 			children = (
-				D02E975A288CAF0C00424B56 /* BookMarkViewController.swift */,
-				D0D94AA028AC03220097B9BD /* BookMarkViewController+UI.swift */,
 				D0D94AA228AC05560097B9BD /* BookMarkCell.swift */,
 				D0D94AA428AC05DF0097B9BD /* BookMarkCell+UI.swift */,
+				D02E975A288CAF0C00424B56 /* BookMarkViewController.swift */,
+				D00D5D8828B15E8F00496C8C /* BookMarkViewController+Extension.swift */,
+				D0D94AA028AC03220097B9BD /* BookMarkViewController+UI.swift */,
 				D0E0F39F28AC2B12004A4CFD /* BookMarkViewModel.swift */,
 			);
 			path = BookMarkScreen;
@@ -437,6 +451,7 @@
 				D0E0F3A028AC2B12004A4CFD /* BookMarkViewModel.swift in Sources */,
 				D0DB46ED289890A200AA5A92 /* RequestModel.swift in Sources */,
 				D0D94AA128AC03220097B9BD /* BookMarkViewController+UI.swift in Sources */,
+				D00D5D8728B15E0B00496C8C /* NewsViewController+Extension.swift in Sources */,
 				D02E9710288CA1DF00424B56 /* SceneDelegate.swift in Sources */,
 				D02E974E288CA99000424B56 /* MakeSplashView.swift in Sources */,
 				D02E9759288CAEDF00424B56 /* NewsDetailViewController.swift in Sources */,
@@ -447,6 +462,7 @@
 				D0DB46F328989FC500AA5A92 /* Service.swift in Sources */,
 				D02E9757288CAE8500424B56 /* NewsViewController.swift in Sources */,
 				D0D94AA528AC05DF0097B9BD /* BookMarkCell+UI.swift in Sources */,
+				D00D5D8928B15E8F00496C8C /* BookMarkViewController+Extension.swift in Sources */,
 				D0DB46F92899DAFB00AA5A92 /* NewsCell+UI.swift in Sources */,
 				D02E974F288CA99000424B56 /* SplashViewController.swift in Sources */,
 				D0E0F3A228AC2DA5004A4CFD /* AppManager.swift in Sources */,

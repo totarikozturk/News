@@ -12,21 +12,21 @@ class BookMarkViewModel {
     private var bookMarksArray: [Article] = []
 
     func addBookmark() {
-        guard let data = Singleton.shared.bookmarksData else { return }
-        if  Singleton.shared.favButtonTapped {
+        guard let data = AppManager.shared.bookmarksData else { return }
+        if  AppManager.shared.favButtonTapped {
             if self.bookMarksArray.isEmpty {
                 self.bookMarksArray.append(data)
                 save()
             } else {
                 if self.bookMarksArray.contains(where: { $0.title == data.title }) {
-                    Singleton.shared.favButtonTapped = false
+                    AppManager.shared.favButtonTapped = false
                 } else {
                    self.bookMarksArray.append(data)
                     save()
-                    Singleton.shared.favButtonTapped = false
+                    AppManager.shared.favButtonTapped = false
                 }
             }
-            Singleton.shared.favButtonTapped = false
+            AppManager.shared.favButtonTapped = false
         }
     }
 

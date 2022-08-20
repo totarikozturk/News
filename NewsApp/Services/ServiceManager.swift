@@ -15,7 +15,6 @@ extension ServiceManager {
 
     func sendRequest<T: Codable>(request: RequestModel, completion: @escaping(Swift.Result<T, AFError>) -> Void) {
         AF.request(request.urlRequest()).validate().response { response in
-            print(response.response?.statusCode as Any)
             guard let data = response.data else {
                 if let error = response.error {
                     completion(Result.failure(error))

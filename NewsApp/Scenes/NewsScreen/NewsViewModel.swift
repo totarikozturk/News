@@ -30,11 +30,7 @@ class NewsViewModel {
     }
 
     func chooseQuery() -> String {
-        if searchQuery.isEmpty {
-            return "everything"
-        } else {
-            return searchQuery
-        }
+        searchQuery.isEmpty ? "everything" : searchQuery
     }
 
     func numberOfRowsInSection(section: Int) -> Int {

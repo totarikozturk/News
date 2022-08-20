@@ -7,8 +7,8 @@
 
 import Foundation
 
-class Singleton {
-    static let shared = Singleton()
+class AppManager {
+    static let shared = AppManager()
     var bookmarksData: Article?
     var favButtonTapped = false
 }

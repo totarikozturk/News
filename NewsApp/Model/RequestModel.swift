@@ -15,7 +15,6 @@ enum RequestHTTPMethod: String {
 class RequestModel: NSObject {
 
     // MARK: Properties
-
     var path: String {
         ""
     }
@@ -31,8 +30,6 @@ class RequestModel: NSObject {
     var body: [String: Any?] {
         [:]
     }
-
-    // (request, response)
     var isLoggingEnabled: (Bool, Bool) {
         (true, true)
     }
@@ -66,7 +63,6 @@ extension RequestModel {
                 print(error)
             }
         }
-
         return request
     }
 }
