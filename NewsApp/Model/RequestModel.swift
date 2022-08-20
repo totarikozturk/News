@@ -46,12 +46,12 @@ extension RequestModel {
 
         for parameter in parameters {
             if let value = parameter.value as? String {
-//                endpoint.append("&\(parameter.key)=\(parameter.value!)")
                 endpoint.append("&\(parameter.key)=\(value)")
             }
         }
-        // endpoint forcecast var
-        var request = URLRequest(url: URL(string: endpoint)!)
+        // there is endpoint forcecast but URL string doesn't allow use it without force cast
+        var request = URLRequest(
+            url: URL(string: endpoint.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)!)!)
         request.httpMethod = method.rawValue
 
         for header in headers {

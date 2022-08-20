@@ -11,8 +11,6 @@
 		D02E9710288CA1DF00424B56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02E970F288CA1DF00424B56 /* SceneDelegate.swift */; };
 		D02E9717288CA1E100424B56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D02E9716288CA1E100424B56 /* Assets.xcassets */; };
 		D02E9725288CA1E100424B56 /* NewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02E9724288CA1E100424B56 /* NewsTests.swift */; };
-		D02E972F288CA1E100424B56 /* NewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02E972E288CA1E100424B56 /* NewsUITests.swift */; };
-		D02E9731288CA1E100424B56 /* NewsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02E9730288CA1E100424B56 /* NewsUITestsLaunchTests.swift */; };
 		D02E9746288CA88D00424B56 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D02E9745288CA88D00424B56 /* SnapKit */; };
 		D02E9749288CA8A400424B56 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D02E9748288CA8A400424B56 /* Kingfisher */; };
 		D02E974E288CA99000424B56 /* MakeSplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02E974C288CA99000424B56 /* MakeSplashView.swift */; };
@@ -69,8 +67,6 @@
 		D02E9720288CA1E100424B56 /* NewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D02E9724288CA1E100424B56 /* NewsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTests.swift; sourceTree = "<group>"; };
 		D02E972A288CA1E100424B56 /* NewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D02E972E288CA1E100424B56 /* NewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsUITests.swift; sourceTree = "<group>"; };
-		D02E9730288CA1E100424B56 /* NewsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D02E974C288CA99000424B56 /* MakeSplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeSplashView.swift; sourceTree = "<group>"; };
 		D02E974D288CA99000424B56 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		D02E9751288CAB7C00424B56 /* SplashViewModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewModal.swift; sourceTree = "<group>"; };
@@ -133,7 +129,6 @@
 			children = (
 				D02E970C288CA1DF00424B56 /* NewsApp */,
 				D02E9723288CA1E100424B56 /* NewsTests */,
-				D02E972D288CA1E100424B56 /* NewsUITests */,
 				D02E970B288CA1DF00424B56 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -167,15 +162,6 @@
 				D02E9724288CA1E100424B56 /* NewsTests.swift */,
 			);
 			path = NewsTests;
-			sourceTree = "<group>";
-		};
-		D02E972D288CA1E100424B56 /* NewsUITests */ = {
-			isa = PBXGroup;
-			children = (
-				D02E972E288CA1E100424B56 /* NewsUITests.swift */,
-				D02E9730288CA1E100424B56 /* NewsUITestsLaunchTests.swift */,
-			);
-			path = NewsUITests;
 			sourceTree = "<group>";
 		};
 		D02E973E288CA77400424B56 /* App */ = {
@@ -485,8 +471,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D02E972F288CA1E100424B56 /* NewsUITests.swift in Sources */,
-				D02E9731288CA1E100424B56 /* NewsUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
